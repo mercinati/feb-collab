@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- ✅ MOST IMPORTANT FOR MOBILE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Collab 💖</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      bottom: -20px;
+      color: rgba(255,255,255,0.8);
+      animation: floatUp 6s linear forwards;
+    }
+
+    @keyframes floatUp {
+      to {
+        transform: translateY(-110vh);
+        opacity: 0;
+      }
+    }
+
+    /* Smooth escape */
+    .escape-btn {
+      transition: transform 0.45s ease;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-pink-200 via-rose-200 to-pink-300">
+
+  <!-- Hearts -->
+  <div id="hearts"></div>
+
+  <!-- PAGE 1 -->
+  <div id="page1"
+    class="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl
+           w-full max-w-md min-h-[210px] sm:min-h-[210px]
+           px-6 py-6 text-center">
+
+    <h1 class="text-xl sm:text-2xl font-semibold text-rose-600 mb-6">
+      Is February free ho..??
+    </h1>
+
+    <div class="flex justify-center gap-4 sm:gap-6">
+      <button id="yes1"
+        class="px-5 py-2 sm:px-6 bg-rose-500 text-white rounded-full hover:bg-rose-600">
+        Haan hu??
+      </button>
+
+      <button id="no1"
+        class="escape-btn px-5 py-2 sm:px-6 bg-slate-400 text-white rounded-full">
+        Nahi
+      </button>
+    </div>
+
+    <!-- Reserved space -->
+    <div class="mt-6 h-6">
+      <p id="msg1" class="hidden text-rose-500 font-medium">
+        Thoda time nikal lo fir 💗
+      </p>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div id="page2"
+    class="hidden bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl
+           w-full max-w-md min-h-[210px] sm:min-h-[210px]
+           px-6 py-6 text-center">
+
+    <h1 class="text-xl sm:text-2xl font-semibold text-purple-600 mb-6">
+      to is baar collab kre kya??
+    </h1>
+
+    <div class="flex justify-center gap-4 sm:gap-6">
+      <button id="yes2"
+        class="px-5 py-2 sm:px-6 bg-purple-500 text-white rounded-full hover:bg-purple-600">
+        hn bilkul 💖
+      </button>
+
+      <button id="no2"
+        class="escape-btn px-5 py-2 sm:px-6 bg-indigo-400 text-white rounded-full">
+        nahi krna
+      </button>
+    </div>
+
+    <div class="mt-6 h-6">
+      <p id="msg2" class="hidden text-purple-500 font-medium">
+        arey yrr kr lo na 🥺
+      </p>
+    </div>
+  </div>
+
+  <!-- PAGE 3 (FINAL) -->
+  <div id="page3"
+    class="hidden bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl
+           w-full max-w-md px-6 py-8 text-center">
+
+    <h1 class="text-xl sm:text-2xl font-semibold text-pink-600 mb-2">
+      akhir maan hi gayi na 💖
+    </h1>
+
+    <p class="text-sm text-gray-500 mb-5">
+      here is a note for you
+    </p>
+
+    <div class="bg-pink-100 rounded-2xl px-5 py-4 text-pink-700 italic">
+      <p>
+        Tere paira di me dhool ban jawa<br>
+        jo kade mera yarr bol da
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
